@@ -48,7 +48,7 @@ public class ReadCSV {
      */
     public void run() {
 
-        String csvFile = "/Users/chrissturtevant0/Google Drive/College/SeniorYearSemester2/Machine Learning/Project 1/DirtyData1.csv";
+        String csvFile = "/Users/chrissturtevant0/Google Drive/Programming/Projects/GitHub/College/Machine Learning/CSVParser/DirtyData1.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
