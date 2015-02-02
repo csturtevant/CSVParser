@@ -21,7 +21,7 @@ import java.util.*;
 public class ReadCSV {
 
     private ArrayList<String[]> clients = new ArrayList<String[]>();
-    private String[] mI = null;
+    private String[] mI = null; //Magazine Information
 
     public static void main(String[] args) {
 
@@ -48,7 +48,7 @@ public class ReadCSV {
      */
     public void run() {
 
-        String csvFile = "/Users/chrissturtevant0/Dropbox/Parser0.0.2/DirtyData1.csv ";
+        String csvFile = "/Users/chrissturtevant0/Google Drive/College/SeniorYearSemester2/Machine Learning/Project 1/DirtyData1.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
@@ -266,10 +266,10 @@ public class ReadCSV {
     public void outputClients() {
 
         for(int i = 0; i < clients.size(); i++) {
-            mI = clients.get(i);
-            for(int j = 0; j < mI.length; j++) {
-                if( i != 0 && j == 0 )
-                    System.out.print( mI[j] + "\t\t" );
+            mI = clients.get(i); //This takes the client (array list) finds the row of the array and points it
+            for(int j = 0; j < mI.length; j++) { //This for loop is for formatting
+               if( i != 0 && j == 0 )
+                   System.out.print( mI[j] + "\t\t" );
                 else if( i == 0 && j == 2 )
                     System.out.print( mI[j] + "\t\t\t" );
                 else if( j == 2 && mI[j].length() <= 21 && mI[j].length() > 10 )
@@ -280,9 +280,12 @@ public class ReadCSV {
                     System.out.print( mI[j] + "\t\t" );
                 else
                     System.out.print( mI[j] + '\t' );
+
             }
             System.out.println( '\n' );
         }
         System.out.println("Done");
+        mI = clients.get(1);
+        System.out.println(mI[2]);
     }
 }
