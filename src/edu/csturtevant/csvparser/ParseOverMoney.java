@@ -34,13 +34,14 @@ public class ParseOverMoney {
     /**
      * returns a row of values as a list
      * returns null if you are past the end of the input stream
+     * sourced from https://stackoverflow.com/questions/843997/csv-parsing-in-java-working-example
      */
     public static List<String> parseLine(Reader r) throws Exception {
         int ch = r.read();
-        while (ch == '\r') {
+        /*while (ch == '\r') {
             //ignore linefeed chars wherever, particularly just before end of file
             ch = r.read();
-        }
+        }*/
         if (ch<0) {
             return null;
         }

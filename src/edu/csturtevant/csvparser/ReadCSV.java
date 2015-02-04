@@ -26,6 +26,7 @@ public class ReadCSV {
     public static void main(String[] args) {
 
         ReadCSV obj = new ReadCSV();
+
         obj.run();
         System.out.println( "Starting first cleanUp\n------------------------------------------------------");
         obj.cleanUp();
