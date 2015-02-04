@@ -16,12 +16,6 @@ public class ParseOverMoney {
     public static void main(String[] args) {
         try {
             Reader reader = new FileReader("/Users/chrissturtevant0/Google Drive/Programming/Projects/GitHub/College/Machine Learning/CSVParser/Data/ParseOverMoney/DataForParseOverMoney.csv");
-            int data = reader.read();
-           /* while (data != -1) {
-                char dataChar = (char) data;
-                data = reader.read();
-                //System.out.print(dataChar);
-            }*/
             for(int i = 1; i != 16; i++)
             {
                 System.out.println(parseLine(reader));
