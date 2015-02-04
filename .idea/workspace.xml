@@ -55,10 +55,10 @@
         <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ParseOverMoney.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.31756756" vertical-offset="243" max-vertical-offset="1648">
-              <caret line="24" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+              <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1716#1724#0" expanded="true" />
+                <element signature="e#1717#1725#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -487,12 +487,12 @@
       <workItem from="1422910664747" duration="92000" />
       <workItem from="1422987158983" duration="158000" />
       <workItem from="1423016294327" duration="239000" />
-      <workItem from="1423061616988" duration="2918000" />
+      <workItem from="1423061616988" duration="3145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10597000" />
+    <option name="totallyTimeSpent" value="10824000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -540,7 +540,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1871961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29970327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29970327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -870,10 +870,10 @@
     <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ParseOverMoney.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.31756756" vertical-offset="243" max-vertical-offset="1648">
-          <caret line="24" column="33" selection-start-line="0" selection-start-column="0" selection-end-line="97" selection-end-column="0" />
+          <caret line="24" column="25" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1716#1724#0" expanded="true" />
+            <element signature="e#1717#1725#0" expanded="true" />
           </folding>
         </state>
       </provider>

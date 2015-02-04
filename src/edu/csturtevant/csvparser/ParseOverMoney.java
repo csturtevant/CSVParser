@@ -22,7 +22,7 @@ public class ParseOverMoney {
                 data = reader.read();
                 //System.out.print(dataChar);
             }*/
-            for(int i = 0; i < 16; i++)
+            for(int i = 1; i != 16; i++)
             {
                 System.out.println(parseLine(reader));
             }
