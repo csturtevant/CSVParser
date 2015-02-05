@@ -317,6 +317,7 @@ public class ReadCSV {
             }
             System.out.println();
         }//End Region Coder
+        /*
         String year = "";
         String month = "";
         int yearVal = 0;
@@ -325,6 +326,7 @@ public class ReadCSV {
         mI = clients.get(1); //Gets the first row
         /* Gets the last two characters in the string
          */
+        /*
         year = mI.get(3).length() > 2 ? mI.get(3).substring(mI.get(3).length() - 2) : mI.get(3);
         month = mI.get(3).substring(0,1);
         //yearVal = Integer.parseInt(year);
@@ -345,7 +347,43 @@ public class ReadCSV {
             period = (yearVal * 12) + (10 * 12) + ( monthVal - 1);
             mI.set(3, Integer.toString(period));
             System.out.println(period);
-        }
-        
+        }*/
+        //Purchase Date to Period
+        for(int i = 1; i < clients.size(); i++) { //Modify the whole csv
+            //Local Variables
+            String year = "";
+            String month = "";
+            int yearVal = 0;
+            int monthVal = 0;
+            int period = 0 ;
+            //Get Row
+            mI = clients.get(i);
+            // Gets the last two characters in the string
+            year = mI.get(3).length() > 2 ? mI.get(3).substring(mI.get(3).length() - 2) : mI.get(3);
+            month = mI.get(3).substring(0,1);
+            //Calculates the Period and sets it
+            if ((year.charAt(0)) == 'L'){ //Ignore Nulls
+                //mI.set(3, "NULL");
+                mI.get(3);
+            }
+            else if((year.charAt(0)) == '9'){ //Specifically for years from 1990 - 1999
+                yearVal = Integer.parseInt(year);
+                monthVal = Integer.parseInt(month);
+                period = (yearVal * 12) - (90 * 12) + ( monthVal - 1);
+                mI.set(3, Integer.toString(period));
+            }
+            else {                            //Specifically for years from 2000+
+                yearVal = Integer.parseInt(year);
+                period = (yearVal * 12) + (10 * 12) + ( monthVal - 1);
+                mI.set(3, Integer.toString(period));
+            }
+            for(int j = 0; j < mI.size(); j++) { //Output the entire row
+
+                System.out.print( mI.get(j) + "\t\t" );
+            }
+            System.out.println();
+        }//End Date to Period Coder
+        //Start of 
+
     }//End of Coding
 }
