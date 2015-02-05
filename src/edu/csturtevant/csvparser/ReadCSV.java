@@ -1,17 +1,3 @@
-/* Christopher Sturtevant 1.26.15 csturtevant@rollins.edu
- * Program ReadCSV
- * This is a program that has been created to output the contents of
- * a csv to a new file, reducing, and cleaning the csv of duplicates,
- * and unnecessary data. This program is menu driven, and executes
- * with a switch statement.
- *
- * User Responsibility:
- * The user needs to supply the path of the file. //Possible change to a window pane prompt?
- * The user also needs to drive the menu and choose the paths he or she would like to take.
-*/
-
-package edu.csturtevant.csvparser;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
@@ -20,13 +6,13 @@ import java.util.*;
 
 public class ReadCSV {
 
-    private ArrayList<String[]> clients = new ArrayList<String[]>();
-    private String[] mI = null; //Magazine Information
+    // http://stackoverflow.com/questions/19575308/read-a-file-separated-by-tab-and-put-the-words-in-an-arraylist
+    private ArrayList<ArrayList<String>> clients = new ArrayList<ArrayList<String>>();
+    private ArrayList<String> mI = null;
 
     public static void main(String[] args) {
 
         ReadCSV obj = new ReadCSV();
-
         obj.run();
         System.out.println( "Starting first cleanUp\n------------------------------------------------------");
         obj.cleanUp();
@@ -40,8 +26,6 @@ public class ReadCSV {
         System.out.println( "Starting second cleanUp\n------------------------------------------------------");
         obj.cleanUp();
         System.out.println( "Second cleanUp finished");
-        //System.out.println( "String Similarity: " + obj.similarity( "Banzinar", "Robin" ) );
-
     }
 
     /* Right now this is getting the data from the CSV file
@@ -49,20 +33,28 @@ public class ReadCSV {
      */
     public void run() {
 
-        String csvFile = "/Users/chrissturtevant0/Google Drive/Programming/Projects/GitHub/College/Machine Learning/CSVParser/Data/DirtyData1.csv";
+        String csvFile = "/Users/chrissturtevant0/Dropbox/csvparser/Combined_Data_Unclean.csv";
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
+        String[] wordsArray;
 
         try {
 
             br = new BufferedReader(new FileReader(csvFile));
             while ((line = br.readLine()) != null) {
 
-
                 // use comma as separator
-                mI = line.split(cvsSplitBy);
-                clients.add(mI);
+
+                if ( !(line.equals(",,,,")) )
+                {
+                    wordsArray = line.split(cvsSplitBy);
+                    mI = new ArrayList<String>();
+                    for(String each : wordsArray) {
+                        mI.add(each);
+                    }
+                    clients.add(mI);
+                }
 
             }
 
@@ -89,60 +81,66 @@ public class ReadCSV {
      * problems.
      */
     public void deDupe() {
-
-        int row = 1;
-        String[] compareRow = null;
+        int row;
+        ArrayList<String> compareRow;
         Scanner scan = new Scanner(System.in);
-        boolean removed = false;
-        int j = -1;
+        boolean removed;
+        int j;
 
+
+        // Finds one duplicate at a time, so it repeats until removed != true
         do
         {
-            j++;
-            String[] mI = clients.get(j);
+            row = 1;
+            compareRow = null;
+            removed = false;
+            j = -1;
+
+            // Iterates through comparing each client with each other client
             do
             {
-        /* This if prevents the method from trying to compare
-         * the last client with anything, which is impossible
-         * because there is nothing left to compare.
-         */
-                if((clients.indexOf(mI) + row) >= clients.size() )
-                    break;
-                compareRow = clients.get((clients.indexOf(mI)) + row);
-                if(mI[0].equals(compareRow[0])) { //This is comparing the ID numbers
-                    if(mI[4].equals(compareRow[4])) { //If those are equal, it checks magazine type
-                        //If both are equal, it is suggested there is a duplicate
-                        System.out.println( "Client 1: " );
-                        for(int i = 0; i < mI.length; i++) //Output first client's info
-                            System.out.print( mI[i] + "\t\t" );
-                        System.out.println( "\nClient 2: " );
-                        for(int i = 0; i < mI.length; i++)
-                            System.out.print( compareRow[i] + "\t\t" ); //Output second client's info
-                        //The user is asked to review the suggested duplicates and act acordingly
-                        System.out.println("\n\nThese clients seem to be duplicates." +
-                                "\nPlease enter number to be deleted, 1 or 2 (0 if not duplicate)" );
-                        int choice = scan.nextInt();
-                        //Removes the chosen client
-                        if( choice == 1 ) {
-                            clients.remove(clients.indexOf(mI));
-                            removed = true;
-                        }
-                        else if( choice == 2 ) {
-                            clients.remove(clients.indexOf(compareRow));
-                            removed = true;
+                j++;
+                ArrayList<String> mI = clients.get(j);
+                // Starts with the row after the client being compared and continues throught the end of the list
+                do
+                {
+          /* This if prevents the method from trying to compare
+           * the last client with anything, which is impossible
+           * because there is nothing left to compare.
+           */
+                    if((clients.indexOf(mI) + row) >= clients.size() )
+                        break;
+                    compareRow = clients.get((clients.indexOf(mI)) + row);
+                    if(mI.get(0).equals(compareRow.get(0))) { //This is comparing the ID numbers
+                        if(mI.get(4).equals(compareRow.get(4))) { //If those are equal, it checks magazine type
+                            //If both are equal, it is suggested there is a duplicate
+                            System.out.println( "Client 1: " );
+                            for(int i = 0; i < mI.size(); i++) //Output first client's info
+                                System.out.print( mI.get(i) + "\t\t" );
+                            System.out.println( "\nClient 2: " );
+                            for(int i = 0; i < mI.size(); i++)
+                                System.out.print( compareRow.get(i) + "\t\t" ); //Output second client's info
+                            //The user is asked to review the suggested duplicates and act acordingly
+                            System.out.println("\n\nThese clients seem to be duplicates." +
+                                    "\nPlease enter number to be deleted, 1 or 2 (0 if not duplicate)" );
+                            int choice = scan.nextInt();
+                            //Removes the chosen client
+                            if( choice == 1 ) {
+                                clients.remove(clients.indexOf(mI));
+                                removed = true;
+                            }
+                            else if( choice == 2 ) {
+                                clients.remove(clients.indexOf(compareRow));
+                                removed = true;
+                            }
                         }
                     }
-                }
-                row++;
-            } while((clients.indexOf(mI) + row) < clients.size() && removed != true);
-            row = 1;
-
-        } while( removed != true && j < clients.size() - 1);
+                    row++;
+                } while((clients.indexOf(mI) + row) < clients.size() && removed != true);
+                row = 1;
+            } while( removed != true && j < clients.size() - 1);
+        } while( removed == true );
         outputClients(); //Output altered collection for review
-        if (removed == true)
-            System.out.println("\n*********************************************************************************" +
-                    "\n*Removes one duplicate at a time. Please run again to assure no more duplicates.*" +
-                    "\n*********************************************************************************");
     }
 
     /* This will be run after deDupe to clean up names, dates, addresses, and
@@ -157,7 +155,7 @@ public class ReadCSV {
     public void nameClean() {
 
         int row = 1;
-        String[] compareRow = null;
+        ArrayList<String> compareRow = null;
         Scanner scan = new Scanner(System.in);
         double percentSame = 0.0;
         int j = -1;
@@ -165,7 +163,7 @@ public class ReadCSV {
         do
         {
             j++;
-            String[] mI = clients.get(j);
+            ArrayList<String> mI = clients.get(j);
             do
             {
         /* This if prevents the method from trying to compare
@@ -175,26 +173,31 @@ public class ReadCSV {
                 if((clients.indexOf(mI) + row) >= clients.size() )
                     break;
                 compareRow = clients.get((clients.indexOf(mI)) + row);
-                percentSame = similarity(mI[1], compareRow[1]);
-                if (percentSame >= 0.75 && percentSame < 1.00) {
-                    if (mI[2].equals(compareRow[2])) {
-                        System.out.println( "Client 1: " );
-                        for(int i = 0; i < mI.length; i++) //Output first client's info
-                            System.out.print( mI[i] + "\t\t" );
-                        System.out.println( "\nClient 2: " );
-                        for(int i = 0; i < mI.length; i++)
-                            System.out.print( compareRow[i] + "\t\t" ); //Output second client's info
-                        System.out.println("\n\nThese clients seem to have an error, please choose the correct one.\n" +
-                                "The other will be adjusted accordingly. (1, or 2, or 0 if not an error)");
-                        int choice = scan.nextInt();
-                        if (choice == 1) {
-                            compareRow[1] = mI[1];
-                            compareRow[0] = mI[0];
-                        } else if (choice == 2) {
-                            mI[1] = compareRow[1];
-                            mI[0] = compareRow[0];
-                        }
+                percentSame = similarity(mI.get(1), compareRow.get(1));
+                if (!(mI.get(0).equals( compareRow.get(0) )) || !(mI.get(1).equals( compareRow.get(1) )) || !(mI.get(2).equals( compareRow.get(2)))) {
+                    if (percentSame >= 0.50 && percentSame <= 1.00) {
+                        percentSame = similarity(mI.get(2), compareRow.get(2));
+                        if (percentSame >= 0.50 && percentSame <= 1.00) {
+                            System.out.println( "Client 1: " );
+                            for(int i = 0; i < mI.size(); i++) //Output first client's info
+                                System.out.print( mI.get(i) + "\t\t" );
+                            System.out.println( "\nClient 2: " );
+                            for(int i = 0; i < mI.size(); i++)
+                                System.out.print( compareRow.get(i) + "\t\t" ); //Output second client's info
+                            System.out.println("\n\nThese clients seem to have an error, please choose the correct one.\n" +
+                                    "The other will be adjusted accordingly. (1, or 2, or 0 if not an error)");
+                            int choice = scan.nextInt();
+                            if (choice == 1) {
+                                compareRow.set(1, mI.get(1));
+                                compareRow.set(0, mI.get(0));
+                                compareRow.set(2, mI.get(2));
+                            } else if (choice == 2) {
+                                mI.set(1, compareRow.get(1));
+                                mI.set(0, compareRow.get(0));
+                                mI.set(2, compareRow.get(2));
+                            }
 
+                        }
 
                     }
                 }
@@ -210,9 +213,9 @@ public class ReadCSV {
      * changed to null.
      */
     public void dateClean() {
-        for(String[] mI : clients) {
-            if (mI[3].equals("11-11-1111") || mI[3].equals("99-99-9999"))
-                mI[3] = "Null";
+        for(ArrayList<String> mI : clients) {
+            if (mI.get(3).equals("11-11-1111") || mI.get(3).equals("99-99-9999") || mI.get(3).equals("00/00/0000"))
+                mI.set(3, "NULL");
         }
     }
 
@@ -267,26 +270,29 @@ public class ReadCSV {
     public void outputClients() {
 
         for(int i = 0; i < clients.size(); i++) {
-            mI = clients.get(i); //This takes the client (array list) finds the row of the array and points it
-            for(int j = 0; j < mI.length; j++) { //This for loop is for formatting
-               if( i != 0 && j == 0 )
-                   System.out.print( mI[j] + "\t\t" );
+            mI = clients.get(i);
+            for(int j = 0; j < mI.size(); j++) {
+                if( i != 0 && j == 0 )
+                    System.out.print( mI.get(j) + "\t\t" );
                 else if( i == 0 && j == 2 )
-                    System.out.print( mI[j] + "\t\t\t" );
-                else if( j == 2 && mI[j].length() <= 21 && mI[j].length() > 10 )
-                    System.out.print( mI[j] + "\t\t" );
-                else if( j == 2 && mI[j].length() <= 11 )
-                    System.out.print( mI[j] + "\t\t\t" );
+                    System.out.print( mI.get(j) + "\t\t\t" );
+                else if( j == 2 && mI.get(j).length() >= 21 )
+                    System.out.print( mI.get(j) + "\t" );
+                else if( j == 2 && mI.get(j).length() <= 21 && mI.get(j).length() > 10 )
+                    System.out.print( mI.get(j) + "\t\t" );
+                else if( j == 2 && mI.get(j).length() <= 11 )
+                    System.out.print( mI.get(j) + "\t\t\t" );
                 else if( i != 0 && j == 3 )
-                    System.out.print( mI[j] + "\t\t" );
+                    System.out.print( mI.get(j) + "\t\t" );
+                else if( j == 1 && mI.get(j).length() >= 13 )
+                    System.out.print( mI.get(j) + "\t\t" );
+                else if( j == 1 )
+                    System.out.print( mI.get(j) + "\t\t\t" );
                 else
-                    System.out.print( mI[j] + '\t' );
-
+                    System.out.print( mI.get(j) + '\t' );
             }
             System.out.println( '\n' );
         }
         System.out.println("Done");
-        mI = clients.get(1);
-        System.out.println(mI[2]);
     }
 }
