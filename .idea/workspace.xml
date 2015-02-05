@@ -29,8 +29,8 @@
       <file leaf-file-name="ReadCSV.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="4292" max-vertical-offset="4848">
-              <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="2436" max-vertical-offset="4848">
+              <caret line="189" column="38" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#347#366#0" expanded="true" />
@@ -42,8 +42,8 @@
       <file leaf-file-name="CodingCSVPractice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8198198" vertical-offset="564" max-vertical-offset="1712">
-              <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+            <state vertical-scroll-proportion="2.2972972" vertical-offset="836" max-vertical-offset="2032">
+              <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#397#416#0" expanded="true" />
@@ -532,12 +532,12 @@
       <workItem from="1423069629075" duration="1569000" />
       <workItem from="1423075342615" duration="1803000" />
       <workItem from="1423151257108" duration="81000" />
-      <workItem from="1423151358398" duration="1555000" />
+      <workItem from="1423151358398" duration="3822000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16664000" />
+    <option name="totallyTimeSpent" value="18931000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -585,7 +585,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.1871961" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29970327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29970327" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1040,8 +1040,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="4292" max-vertical-offset="4848">
-          <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2436" max-vertical-offset="4848">
+          <caret line="189" column="38" selection-start-line="189" selection-start-column="32" selection-end-line="189" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#347#366#0" expanded="true" />
@@ -1051,8 +1051,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8198198" vertical-offset="564" max-vertical-offset="1712">
-          <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+        <state vertical-scroll-proportion="2.2972972" vertical-offset="836" max-vertical-offset="2032">
+          <caret line="116" column="17" selection-start-line="116" selection-start-column="17" selection-end-line="116" selection-end-column="17" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#397#416#0" expanded="true" />

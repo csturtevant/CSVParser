@@ -17,6 +17,7 @@ public class CodingCSVPractice {
     public static void main (String[] args) {
         CodingCSVPractice obj = new CodingCSVPractice();
         obj.run();
+
     }
 
     public void outputClients() {
@@ -45,9 +46,27 @@ public class CodingCSVPractice {
             }
             System.out.println( '\n' );
         }
-        mI = clients.get(1);
-        System.out.println(mI.get(2));
         System.out.println("Done");
+    }
+
+    public void coding() { //This function is used for cleaning the code and setting simpler human readable values
+        //mI = clients.get(1); //Get row 1
+        //System.out.println(mI.get(2)); //Get Column 2
+        //region = mI.get(2).charAt(0);
+        //mI.set(2, Character.toString(region));
+        //System.out.println(mI.get(2));
+        char region;
+        for(int i = 0; i < clients.size(); i++) { //Modify the whole csv
+            mI = clients.get(i);
+            region = mI.get(2).charAt(0);
+            mI.set(2, Character.toString(region));
+            for(int j = 0; j < mI.size(); j++) { //Output the entire row
+
+                System.out.print( mI.get(j) + "\t\t" );
+            }
+            System.out.println();
+        }
+
     }
 
     /* Right now this is getting the data from the CSV file
@@ -95,6 +114,7 @@ public class CodingCSVPractice {
             }
         }
         outputClients();
+        coding();
     }
 
 
