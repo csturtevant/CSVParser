@@ -26,6 +26,8 @@ public class ReadCSV {
         System.out.println( "Starting second cleanUp\n------------------------------------------------------");
         obj.cleanUp();
         System.out.println( "Second cleanUp finished");
+        obj.coding(); //Changes the region //CHANGE - needs a switch
+        //obj.outputClients();
     }
 
     /* Right now this is getting the data from the CSV file
@@ -295,4 +297,55 @@ public class ReadCSV {
         }
         System.out.println("Done");
     }
+
+    public void coding() { //This function is used for cleaning the code and setting simpler human readable values
+        //mI = clients.get(1); //Get row 1
+        //System.out.println(mI.get(2)); //Get Column 2
+        //region = mI.get(2).charAt(0);
+        //mI.set(2, Character.toString(region));
+        //System.out.println(mI.get(2));
+        /*The following function sets the address line to a region and
+         */
+        char region;
+        for(int i = 1; i < clients.size(); i++) { //Modify the whole csv
+            mI = clients.get(i);
+            region = mI.get(2).charAt(0);         //CHANGE - needs to be 3 for after joining
+            mI.set(2, Character.toString(region));
+            for(int j = 0; j < mI.size(); j++) { //Output the entire row
+
+                System.out.print( mI.get(j) + "\t\t" );
+            }
+            System.out.println();
+        }//End Region Coder
+        String year = "";
+        String month = "";
+        int yearVal = 0;
+        int monthVal = 0;
+        int period = 0 ;
+        mI = clients.get(1); //Gets the first row
+        /* Gets the last two characters in the string
+         */
+        year = mI.get(3).length() > 2 ? mI.get(3).substring(mI.get(3).length() - 2) : mI.get(3);
+        month = mI.get(3).substring(0,1);
+        //yearVal = Integer.parseInt(year);
+        //Calculates the Period of row 1
+        if ((year.charAt(0)) == 'N'){
+            mI.set(3, "NULL");
+        }
+        else if((year.charAt(0)) == '9'){
+            yearVal = Integer.parseInt(year);
+            monthVal = Integer.parseInt(month);
+            period = (yearVal * 12) - (90 * 12) + ( monthVal - 1);
+            mI.set(3, Integer.toString(period));
+            System.out.println(period);
+            System.out.println(mI.get(3));
+        }
+        else {
+            yearVal = Integer.parseInt(year);
+            period = (yearVal * 12) + (10 * 12) + ( monthVal - 1);
+            mI.set(3, Integer.toString(period));
+            System.out.println(period);
+        }
+        
+    }//End of Coding
 }

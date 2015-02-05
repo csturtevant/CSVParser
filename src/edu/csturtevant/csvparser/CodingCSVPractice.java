@@ -55,18 +55,27 @@ public class CodingCSVPractice {
         //region = mI.get(2).charAt(0);
         //mI.set(2, Character.toString(region));
         //System.out.println(mI.get(2));
+        /*The following function sets the address line to a region and
+         */
         char region;
         for(int i = 0; i < clients.size(); i++) { //Modify the whole csv
             mI = clients.get(i);
-            region = mI.get(2).charAt(0);
+            region = mI.get(2).charAt(0);         //CHANGE - needs to be 3 for after joining
             mI.set(2, Character.toString(region));
             for(int j = 0; j < mI.size(); j++) { //Output the entire row
 
                 System.out.print( mI.get(j) + "\t\t" );
             }
             System.out.println();
-        }
-
+        }//End Region Coder
+       /* String year = "";
+        int yearVal = 0;
+        String month = "";
+        int period = 0 ;
+        mI = clients.get(1); //Gets the first row
+        year = mI.get(3).substring(7,10); //Gets the year of the purchase date of the first row //Incorrect index wrong cSV
+        yearVal = Integer.parseInt(year);
+        System.out.println(year + yearVal); */
     }
 
     /* Right now this is getting the data from the CSV file
@@ -75,7 +84,7 @@ public class CodingCSVPractice {
     public void run() {
 
         String csvFile = "/Users/chrissturtevant0/Google Drive/Programming/Projects/GitHub/College/" +
-                         "Machine Learning/CSVParser/Combined_Data_Unclean.csv";
+                         "Machine Learning/CSVParser/Combined_Data_Unclean.csv"; //File Path
         BufferedReader br = null;
         String line = "";
         String cvsSplitBy = ",";
