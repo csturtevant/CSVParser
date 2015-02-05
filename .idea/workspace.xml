@@ -26,11 +26,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ReadCSV.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ReadCSV.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.2882883" vertical-offset="432" max-vertical-offset="4848">
-              <caret line="35" column="93" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="4292" max-vertical-offset="4848">
+              <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#347#366#0" expanded="true" />
@@ -39,25 +39,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FileChooserDemo.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/FileChooserDemo.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="1488">
-              <caret line="68" column="49" selection-start-line="68" selection-start-column="49" selection-end-line="68" selection-end-column="49" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CodingCSVPractice.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CodingCSVPractice.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="870">
-              <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
+            <state vertical-scroll-proportion="0.8198198" vertical-offset="564" max-vertical-offset="1712">
+              <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
               <folding>
-                <element signature="imports" expanded="false" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#397#416#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -77,8 +66,8 @@
         <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/JoinCSV.java" />
         <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/ParseOverMoney.java" />
         <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/FileChooserDemo.java" />
-        <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java" />
         <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java" />
+        <option value="$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java" />
       </list>
     </option>
   </component>
@@ -175,7 +164,7 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="options.splitter.details.proportions" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.FileChooserDemo">
+  <component name="RunManager" selected="Application.CodingCSVPractice">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="edu.csturtevant.csvparser.ReadCSV" />
@@ -184,28 +173,6 @@
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" value="" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="Project 1" />
-      <envs />
-      <RunnerSettings RunnerId="Run" />
-      <ConfigurationWrapper RunnerId="Run" />
-      <method />
-    </configuration>
-    <configuration default="false" name="JoinCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="edu.csturtevant.csvparser.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="edu.csturtevant.csvparser.JoinCSV" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
@@ -262,6 +229,28 @@
     <configuration default="false" name="ReadCSV" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="ReadCSV" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="Project 1" />
+      <envs />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="CodingCSVPractice" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="edu.csturtevant.csvparser.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="edu.csturtevant.csvparser.CodingCSVPractice" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" />
@@ -494,18 +483,18 @@
     </configuration>
     <list size="5">
       <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-      <item index="1" class="java.lang.String" itemvalue="Application.JoinCSV" />
-      <item index="2" class="java.lang.String" itemvalue="Application.ParseOverMoney" />
-      <item index="3" class="java.lang.String" itemvalue="Application.FileChooserDemo" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ReadCSV" />
+      <item index="1" class="java.lang.String" itemvalue="Application.ParseOverMoney" />
+      <item index="2" class="java.lang.String" itemvalue="Application.FileChooserDemo" />
+      <item index="3" class="java.lang.String" itemvalue="Application.ReadCSV" />
+      <item index="4" class="java.lang.String" itemvalue="Application.CodingCSVPractice" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.FileChooserDemo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.ReadCSV" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ParseOverMoney" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="4" class="java.lang.String" itemvalue="Application.JoinCSV" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CodingCSVPractice" />
+        <item index="1" class="java.lang.String" itemvalue="Application.FileChooserDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.ReadCSV" />
+        <item index="3" class="java.lang.String" itemvalue="Application.ParseOverMoney" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -543,12 +532,12 @@
       <workItem from="1423069629075" duration="1569000" />
       <workItem from="1423075342615" duration="1803000" />
       <workItem from="1423151257108" duration="81000" />
-      <workItem from="1423151358398" duration="776000" />
+      <workItem from="1423151358398" duration="1555000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15885000" />
+    <option name="totallyTimeSpent" value="16664000" />
   </component>
   <component name="TodoView" selected-index="0">
     <todo-panel id="selected-file">
@@ -628,8 +617,20 @@
           <properties />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java</url>
+          <line>271</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-method">
+          <url>file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java</url>
+          <line>269</line>
+          <properties class="ReadCSV" method="outputClients" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="3" />
+      <option name="time" value="5" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -664,7 +665,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="780" max-vertical-offset="870">
           <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#397#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -695,7 +697,8 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="880" max-vertical-offset="976">
           <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#397#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1025,16 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="976">
-          <caret line="55" column="2" selection-start-line="55" selection-start-column="2" selection-end-line="55" selection-end-column="2" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/FileChooserDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="32" max-vertical-offset="1488">
@@ -1047,11 +1040,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/ReadCSV.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2882883" vertical-offset="432" max-vertical-offset="4848">
-          <caret line="35" column="93" selection-start-line="35" selection-start-column="93" selection-end-line="35" selection-end-column="93" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="4292" max-vertical-offset="4848">
+          <caret line="294" column="9" selection-start-line="294" selection-start-column="9" selection-end-line="294" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#347#366#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/edu/csturtevant/csvparser/CodingCSVPractice.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8198198" vertical-offset="564" max-vertical-offset="1712">
+          <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#397#416#0" expanded="true" />
           </folding>
         </state>
       </provider>
